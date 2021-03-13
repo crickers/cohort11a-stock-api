@@ -9,7 +9,8 @@ var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 
 var stocksRouter = Require("./routes/stocks");
-var cashRouter = Require("./routes/cash");
+var walletRouter = Require("./routes/wallet");
+
 var app = express();
 
 app.use(cors());
@@ -26,6 +27,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+
+app.use("/api/v1/stocks", stocksRouter);
+app.use("/api/v1/wallet", walletRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
