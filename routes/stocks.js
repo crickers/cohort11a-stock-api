@@ -14,7 +14,7 @@ const yahooStockPrices = require("yahoo-stock-prices");
 // POST /api/v1/stocks/search req.body
 
 router.get("/search/:symbol", async function (req, res, next) {
-  res.send(body: respond with a stock);
+  //res.send(body: respond with a stock);
   console.log(req.query);
   console.log(req.params);
   try {
