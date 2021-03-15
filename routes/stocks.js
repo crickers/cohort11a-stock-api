@@ -18,7 +18,7 @@ router.get("/search/:symbol", async function (req, res, next) {
   console.log(req.query);
   console.log(req.params);
   try {
-    const data = await yahooStocknpmPrices.getCurrentData(req.params.symbol);
+    const data = await yahooStockPrices.getCurrentData(req.params.symbol);
     res.json({ success: true, data: data });
   } catch (err) {
     res.json({ success: false, data: {} });
