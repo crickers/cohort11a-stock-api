@@ -7,10 +7,16 @@ var cors = require("cors");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
-const { ADDRCONFIG } = require("dns");
 
-var stocksRouter = Require("./routes/stocks");
-var walletRouter = Require("./routes/wallet");
+var portfolioRouter = require("./routes/portfolio");
+var walletRouter = require("./routes/wallet");
+
+require("./lib/seed");
+
+// const { ADDRCONFIG } = require("dns");
+
+// var stocksRouter = Require("./routes/stocks");
+// var walletRouter = Require("./routes/wallet");
 
 var app = express();
 
